@@ -6,10 +6,12 @@ import TopicalPastPapers from './Pages/TopicalPastPapers';
 import Components from './Pages/Components';
 import Topics from './Pages/Topics';
 import MockPapers from './Pages/MockPapers';
+import ScrollToTop from './SharedComponents/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         
