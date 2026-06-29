@@ -19,9 +19,15 @@ const ResourceCardLanding = ({ icon, title, description, cta, boards }) => {
 
   return (
     <div
-      className="relative bg-white rounded-xl border border-tertiary-fixed hover:border-primary transition-all overflow-hidden"
+      className="relative bg-white rounded-xl border border-tertiary-fixed hover:border-primary transition-all overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
+      onClick={() => {
+        // Toggle open state on mobile/tablet views
+        if (window.innerWidth < 768) {
+          setIsOpen(prev => !prev);
+        }
+      }}
     >
       {/* ── Static card body ──────────────────────────────────────────────── */}
       <div className="p-8 flex flex-col h-full">
@@ -37,12 +43,8 @@ const ResourceCardLanding = ({ icon, title, description, cta, boards }) => {
           <span className="material-symbols-outlined text-sm">chevron_right</span>
         </span>
 
-        {/* Mobile: tap-to-toggle button */}
-        <button
-          className="md:hidden inline-flex items-center gap-1 text-primary font-label-md mt-auto"
-          onClick={(e) => { e.stopPropagation(); setIsOpen(prev => !prev); }}
-          aria-expanded={isOpen}
-        >
+        {/* Mobile: tap-to-toggle indicator (now passive, parent handles click) */}
+        <div className="md:hidden inline-flex items-center gap-1 text-primary font-label-md mt-auto">
           <span>{isOpen ? 'Close' : cta}</span>
           <span
             className="material-symbols-outlined text-sm transition-transform duration-200"
@@ -50,13 +52,14 @@ const ResourceCardLanding = ({ icon, title, description, cta, boards }) => {
           >
             chevron_right
           </span>
-        </button>
+        </div>
 
         {/* Mobile: inline board list — slides open on tap */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             isOpen ? 'max-h-56 opacity-100 mt-4' : 'max-h-0 opacity-0'
           }`}
+          onClick={(e) => e.stopPropagation()} // Prevent toggling/closing when clicking links
         >
           <div className="flex flex-col gap-2 pt-4 border-t border-tertiary-fixed">
             {boards.map((board) => (
