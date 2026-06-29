@@ -6,6 +6,7 @@ import TopicalPastPapers from './Pages/TopicalPastPapers';
 import Components from './Pages/Components';
 import Topics from './Pages/Topics';
 import MockPapers from './Pages/MockPapers';
+import BoardSelection from './Pages/BoardSelection';
 import ScrollToTop from './SharedComponents/ScrollToTop';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/topical/:boardId/:subjectId/:componentId" element={<Topics />} />
 
         <Route path="/mock-papers" element={<MockPapers />} />
+        <Route path="/boards/:examBoardId" element={<BoardSelection />} />
       </Routes>
     </Router>
   );

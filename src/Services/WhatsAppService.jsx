@@ -2,7 +2,7 @@
 export const handleWhatsAppAllComponents = (e, boardTitle, subjectName, subjectCode) => {
   e.preventDefault(); // Prevent default anchor behavior
   
-  const phoneNumber = "923292248788"; // Replace with your actual WhatsApp number
+  const phoneNumber = "923292248788"; 
   
   // Dynamically insert the parameters passed from the component
   const message = `Hi Resourza! I'm interested in purchasing ALL topical components for ${boardTitle} ${subjectName} (${subjectCode}). Could you share the details?`;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../SharedComponents/Footer';
+import BoardNavBar from '../SharedComponents/BoardNavBar';
 import { handleWhatsAppGeneralInquiry, handleWhatsAppMockPapers } from '../Services/WhatsAppService';
 
 const MockPapers = () => {
@@ -15,44 +16,7 @@ const MockPapers = () => {
             <Link to="/" className="text-headline-md font-headline-md font-bold text-primary">Resourza</Link>
           </div>
           <div className="hidden md:flex items-center gap-gutter ml-auto mr-0">
-            <div className="relative group cursor-pointer py-4">
-              <div className="flex items-center gap-1 text-on-surface-variant font-body-md group-hover:text-primary transition-colors">
-                <span>Board</span>
-                <span className="material-symbols-outlined text-sm">expand_more</span>
-              </div>
-              <div className="absolute top-full left-0 w-48 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>O Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/o-levels">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/o-levels">Yearly Past Papers</Link>
-                  </div>
-                </div>
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>A Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/a-levels">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/a-levels">Yearly Past Papers</Link>
-                  </div>
-                </div>
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>IGCSE</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/igcse">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/igcse">Yearly Past Papers</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BoardNavBar />
             
             <a href="#contact" onClick={handleWhatsAppGeneralInquiry} className="text-on-surface-variant font-body-md hover:text-primary transition-colors cursor-pointer">
               Contact Us

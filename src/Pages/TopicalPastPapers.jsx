@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { topicalData } from '../data/topicalData';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
+import BoardNavBar from '../SharedComponents/BoardNavBar';
 
 const TopicalPastPapers = () => {
   const { boardId } = useParams();
@@ -39,51 +40,7 @@ const TopicalPastPapers = () => {
             <Link to="/" className="text-primary font-bold font-body-md border-b-2 border-primary">Resources</Link>
             
             {/* Nested Board Dropdown */}
-            <div className="relative group cursor-pointer py-4">
-              <div className="flex items-center gap-1 text-on-surface-variant font-body-md group-hover:text-primary transition-colors">
-                <span>Board</span>
-                <span className="material-symbols-outlined text-sm">expand_more</span>
-              </div>
-              <div className="absolute top-full left-0 w-48 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
-                
-                {/* O Levels Sub-menu */}
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>O Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link to="/topical/o-levels" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Topical Past Papers</Link>
-                    <Link to="/board/o-levels" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Yearly Past Papers</Link>
-                  </div>
-                </div>
-
-                {/* A Levels Sub-menu */}
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>A Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link to="/topical/a-levels" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Topical Past Papers</Link>
-                    <Link to="/board/a-levels" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Yearly Past Papers</Link>
-                  </div>
-                </div>
-
-                {/* IGCSE Sub-menu */}
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>IGCSE</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link to="/topical/igcse" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Topical Past Papers</Link>
-                    <Link to="/board/igcse" className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md">Yearly Past Papers</Link>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
+            <BoardNavBar />
           </div>
           
           {/* Functional Search Bar */}

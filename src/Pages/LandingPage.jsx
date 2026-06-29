@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { handleWhatsAppGeneralInquiry } from '../Services/WhatsAppService';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
+import ResourceCardLanding from '../SharedComponents/ResourceCardLanding';
+import { TOPICAL_BOARDS, YEARLY_BOARDS } from '../data/Hoverdata';
+import BoardNavBar from '../SharedComponents/BoardNavBar';
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,57 +26,20 @@ const LandingPage = () => {
             <Link to="/" className="text-headline-md font-headline-md font-bold text-primary">Resourza</Link>
           </div>
           <div className="hidden md:flex  items-center gap-gutter ml-auto mr-0">
-            <div className="relative group cursor-pointer py-4">
-              <div className="flex items-center gap-1 text-on-surface-variant font-body-md group-hover:text-primary transition-colors">
-                <span>Board</span>
-                <span className="material-symbols-outlined text-sm">expand_more</span>
-              </div>
-              <div className="absolute top-full left-0 w-48 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>O Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/o-levels">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/o-levels">Yearly Past Papers</Link>
-                  </div>
-                </div>
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>A Levels</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/a-levels">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/a-levels">Yearly Past Papers</Link>
-                  </div>
-                </div>
-                <div className="relative group/sub">
-                  <div className="flex items-center justify-between px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md cursor-pointer">
-                    <span>IGCSE</span>
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                  <div className="absolute top-0 left-full ml-1 w-56 bg-surface-container-lowest border border-tertiary/20 rounded-xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 p-2">
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/topical/igcse">Topical Past Papers</Link>
-                    <Link className="block px-4 py-2 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg transition-colors font-body-md" to="/board/igcse">Yearly Past Papers</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BoardNavBar />
             <a className="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#contact" onClick={handleWhatsAppGeneralInquiry}>Contact Us</a>
             <a className="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#academic-support">Resources</a>
           </div>
-          <button 
-            onClick={() => setIsMobileMenuOpen(true)} 
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
             className="md:hidden text-primary p-2 flex items-center justify-center rounded-full hover:bg-primary/5 transition-colors"
           >
             <span className="material-symbols-outlined text-3xl">menu</span>
           </button>
         </nav>
-        <MobileHeader 
-          isMobileMenuOpen={isMobileMenuOpen} 
-          setIsMobileMenuOpen={setIsMobileMenuOpen} 
+        <MobileHeader
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
       </header>
 
@@ -83,17 +49,17 @@ const LandingPage = () => {
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 items-center w-full">
             <div className="z-10 space-y-6 order-2 md:order-1 text-center md:text-left">
               <div className="flex justify-center md:justify-start">
-                <span className="px-4 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-md">Trusted by 60,000+ Students</span>
+                <span className="px-4 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-md">Trusted by 1500+ Students</span>
               </div>
               <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary leading-tight">
-                Elevate Your Teaching with Resourza Resources
+                Your Complete Resource Hub for O/A Level & IGCSE Success
               </h1>
               <p className="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-lg mx-auto md:mx-0">
-                Empowering O/A Level educators and students with premium mock papers, topical notes, and a decade of past papers. Everything you need for academic excellence in one place.
+                Premium notes, topical past papers, and mock exams built for educators and students who want results, not just resources.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
                 {/* Scroll Action Trigger */}
-                <button 
+                <button
                   onClick={() => scrollToSection('academic-support')}
                   className="px-8 py-4 rounded-full bg-primary text-on-primary font-label-md hover:opacity-90 shadow-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                 >
@@ -120,7 +86,7 @@ const LandingPage = () => {
         <section className="bg-primary py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-gutter">
             <div className="text-center">
-              <div className="text-primary-fixed text-headline-lg-mobile md:text-display-lg font-display-lg">60K+</div>
+              <div className="text-primary-fixed text-headline-lg-mobile md:text-display-lg font-display-lg">1.5K+</div>
               <div className="text-on-primary/70 font-label-md uppercase tracking-widest text-sm md:text-base">Active Students</div>
             </div>
             <div className="text-center">
@@ -144,7 +110,7 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
               <div className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:soft-blue-shadow transition-all text-center">
                 <h3 className="font-headline-md text-primary mb-4">O Levels</h3>
-                <p className="font-body-md text-on-surface-variant">Full syllabus coverage with detailed revision notes and mark schemes.</p>
+                <p className="font-body-md text-on-surface-variant">Full syllabus coverage with detailed revision notes,topical past papers & notes.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:soft-blue-shadow transition-all text-center">
                 <h3 className="font-headline-md text-primary mb-4">A Levels</h3>
@@ -166,9 +132,9 @@ const LandingPage = () => {
               <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Comprehensive Academic Support</h2>
               <p className="font-body-md text-on-surface-variant max-w-2xl mx-auto">Our resources are meticulously curated by subject experts to ensure they align perfectly with the latest O/A Level curricula.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-gutter">
-              
+
               {/* Mock Papers Card -> Routes to /mock-papers */}
               <Link to="/mock-papers" className="block bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow relative cursor-pointer">
                 <div className="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6 text-primary">
@@ -178,7 +144,7 @@ const LandingPage = () => {
                 <p className="font-body-md text-on-surface-variant mb-6">Simulation exams designed to mimic real O/A Level difficulty and format.</p>
                 <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Request Now <span className="material-symbols-outlined ml-1">chevron_right</span></span>
               </Link>
-              
+
               {/* Subject Notes Card -> Placeholder link until page is built */}
               <Link to="#notes" className="block bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow relative cursor-pointer">
                 <div className="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6 text-primary">
@@ -188,26 +154,24 @@ const LandingPage = () => {
                 <p className="font-body-md text-on-surface-variant mb-6">Concise, well-structured summaries of complex topics for fast revision.</p>
                 <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Read Notes <span className="material-symbols-outlined ml-1">chevron_right</span></span>
               </Link>
-              
-              {/* Topical Past Papers Card -> Routes to /topical/a-levels */}
-              <Link to="/topical/a-levels" className="block bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow relative cursor-pointer">
-                <div className="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6 text-primary">
-                  <span className="material-symbols-outlined text-3xl">list_alt</span>
-                </div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-3">Topical Past Papers</h3>
-                <p className="font-body-md text-on-surface-variant mb-6">Master specific chapters with questions categorized by topic.</p>
-                <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">View Papers <span className="material-symbols-outlined ml-1">chevron_right</span></span>
-              </Link>
-              
-              {/* Yearly Past Papers Card -> Routes to /board/a-levels */}
-              <Link to="/board/a-levels" className="block bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow relative cursor-pointer">
-                <div className="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6 text-primary">
-                  <span className="material-symbols-outlined text-3xl">history</span>
-                </div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-3">Yearly Past Papers</h3>
-                <p className="font-body-md text-on-surface-variant mb-6">Access a decade of previous examination papers with official mark schemes.</p>
-                <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Download All <span className="material-symbols-outlined ml-1">chevron_right</span></span>
-              </Link>
+
+              {/* Topical Past Papers Card — interactive board picker */}
+              <ResourceCardLanding
+                icon="list_alt"
+                title="Topical Past Papers"
+                description="Master specific chapters with questions categorized by topic."
+                cta="View Papers"
+                boards={TOPICAL_BOARDS}
+              />
+
+              {/* Yearly Past Papers Card — interactive board picker */}
+              <ResourceCardLanding
+                icon="history"
+                title="Yearly Past Papers"
+                description="Access a decade of previous examination papers with official mark schemes."
+                cta="View All"
+                boards={YEARLY_BOARDS}
+              />
 
             </div>
           </div>
@@ -228,7 +192,7 @@ const LandingPage = () => {
                 <ul className="space-y-6 flex-grow">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-error mt-1 shrink-0">remove</span>
-                    <span className="font-body-md text-on-surface-variant">Hours spent hunting for mark schemes across multiple sites.</span>
+                    <span className="font-body-md text-on-surface-variant">Hours spent hunting for relevant notes & past papers across multiple sites.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-error mt-1 shrink-0">remove</span>
@@ -251,11 +215,11 @@ const LandingPage = () => {
                 <ul className="space-y-6 flex-grow">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
-                    <span className="font-body-md text-on-surface">One-click access to papers and their corresponding mark schemes.</span>
+                    <span className="font-body-md text-on-surface">One-click access to topical notes and past papers found nowhere else</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
-                    <span className="font-body-md text-on-surface">Intelligent topical search to focus on your weakest areas.</span>
+                    <span className="font-body-md text-on-surface"> Can't find a resource? We source and arrange it on request, just for you.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
@@ -340,8 +304,8 @@ const LandingPage = () => {
             <h2 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-primary mb-6 md:mb-8">Ready to Transform Your Learning Journey?</h2>
             <p className="font-body-lg text-body-md md:text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-10 md:mb-12">Join over 60,000 students and tutors who are achieving academic excellence with Resourza. Start your journey today with no obligation.</p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-              <button onClick={()=>scrollToSection('academic-support')}
-               className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-full bg-white text-primary font-headline-md hover:bg-primary-fixed transition-all shadow-xl">View Our Resources</button>
+              <button onClick={() => scrollToSection('academic-support')}
+                className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-full bg-white text-primary font-headline-md hover:bg-primary-fixed transition-all shadow-xl">View Our Resources</button>
               <button className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-full border-2 border-white/40 text-white font-headline-md hover:bg-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap" onClick={handleWhatsAppGeneralInquiry}>Talk To An Expert</button>
             </div>
           </div>

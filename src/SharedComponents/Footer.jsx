@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1">
             <span className="text-headline-md font-headline-md font-bold text-primary mb-4 md:mb-6 block">Resourza</span>
-            <p className="font-body-md text-on-surface-variant mb-6">Empowering O/A Level Educators and Students through premium digital academic resources.</p>
+            <p className="font-body-md text-on-surface-variant mb-6">Empowering O/A Level & IGCSE Educators and Students through premium digital academic resources.</p>
             <div className="flex gap-4">
               <a className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#facebook"><span className="material-symbols-outlined">public</span></a>
               <a className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#twitter"><span className="material-symbols-outlined">forum</span></a>

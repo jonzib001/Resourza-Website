@@ -37,11 +37,12 @@ const MobileHeader = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
     setOpenSubBoard(openSubBoard === board ? '' : board);
   };
 
-  // Helper array to keep JSX clean
+  // Board entries for the mobile accordion
   const boardsList = [
-    { name: 'O Levels', id: 'o-levels' },
-    { name: 'A Levels', id: 'a-levels' },
-    { name: 'IGCSE', id: 'igcse' }
+    { name: 'Cambridge', id: 'cambridge' },
+    { name: 'Edexcel', id: 'edexcel' },
+    { name: 'IB', id: 'ib' },
+    { name: 'ACCA', id: 'acca' },
   ];
 
   return (
@@ -90,35 +91,15 @@ const MobileHeader = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
             <div className={`overflow-hidden transition-all duration-300 ${isBoardOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="flex flex-col px-6 pb-6 bg-white/50">
                 {boardsList.map((board) => (
-                  <div key={board.id} className="flex flex-col border-l-2 border-tertiary/10 ml-2 pl-4 mt-2">
-                    <button 
-                      onClick={() => toggleSubBoard(board.id)} 
-                      className="flex items-center justify-between py-4 text-lg font-medium text-on-surface-variant hover:text-primary transition-colors"
-                    >
-                      <span>{board.name}</span>
-                      <span className={`material-symbols-outlined transition-transform duration-200 ${openSubBoard === board.id ? 'rotate-180 text-primary' : ''}`}>
-                        expand_more
-                      </span>
-                    </button>
-                    
-                    {/* Nested Links for specific Board */}
-                    <div className={`overflow-hidden transition-all duration-300 flex flex-col pl-4 gap-4 border-l-2 border-primary/20 ml-2 ${openSubBoard === board.id ? 'max-h-40 py-2 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <Link 
-                        to={`/topical/${board.id}`} 
-                        onClick={closeMenu} 
-                        className="text-base text-on-surface-variant hover:text-primary transition-colors"
-                      >
-                        Topical Past Papers
-                      </Link>
-                      <Link 
-                        to={`/board/${board.id}`} 
-                        onClick={closeMenu} 
-                        className="text-base text-on-surface-variant hover:text-primary transition-colors"
-                      >
-                        Yearly Past Papers
-                      </Link>
-                    </div>
-                  </div>
+                  <Link
+                    key={board.id}
+                    to={`/boards/${board.id}`}
+                    onClick={closeMenu}
+                    className="flex items-center justify-between py-4 border-l-2 border-tertiary/10 ml-2 pl-4 mt-2 text-lg font-medium text-on-surface-variant hover:text-primary transition-colors"
+                  >
+                    <span>{board.name}</span>
+                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  </Link>
                 ))}
               </div>
             </div>
