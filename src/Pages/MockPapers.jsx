@@ -13,6 +13,7 @@ const MockPapers = () => {
       <header className="bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-tertiary/20">
         <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
+            <img src="/Final-Logo.png" alt="Resourza" className="h-8" />
             <Link to="/" className="text-headline-md font-headline-md font-bold text-primary">Resourza</Link>
           </div>
           <div className="hidden md:flex items-center gap-gutter ml-auto mr-0">

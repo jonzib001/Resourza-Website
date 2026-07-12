@@ -7,6 +7,8 @@ import ResourceCardLanding from '../SharedComponents/ResourceCardLanding';
 import { TOPICAL_BOARDS, YEARLY_BOARDS } from '../data/Hoverdata';
 import BoardNavBar from '../SharedComponents/BoardNavBar';
 
+import heroImage from '../assets/Hero.jpeg';
+
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,6 +25,7 @@ const LandingPage = () => {
       <header className="bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-tertiary/20">
         <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
+            <img src="/Final-Logo.png" alt="Resourza" className="h-8" />
             <Link to="/" className="text-headline-md font-headline-md font-bold text-primary">Resourza</Link>
           </div>
           <div className="hidden md:flex  items-center gap-gutter ml-auto mr-0">
@@ -49,7 +52,7 @@ const LandingPage = () => {
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 items-center w-full">
             <div className="z-10 space-y-6 order-2 md:order-1 text-center md:text-left">
               <div className="flex justify-center md:justify-start">
-                <span className="px-4 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-md">Trusted by 1500+ Students</span>
+                <span className="px-4 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-md">Trusted by 1500+ Educators</span>
               </div>
               <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary leading-tight">
                 Your Complete Resource Hub for O/A Level & IGCSE Success
@@ -74,7 +77,7 @@ const LandingPage = () => {
             </div>
             <div className="relative z-10 order-1 md:order-2 px-4 md:px-0">
               <div className="rounded-2xl overflow-hidden soft-blue-shadow bg-white p-2 md:p-4 rotate-0 md:rotate-2 transform hover:rotate-0 transition-transform duration-500 max-w-md mx-auto md:max-w-none">
-                <img alt="Digital Education Tools" className="w-full h-auto rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt5__ORRmaSv3pdgehra2uC89XeoWiqPFULenlTwTz5z0svcx2GXuFvdnonsA7eB5K8nB8eWe-y2IYox0lFMWns7K0gr6ulmKZExtgardC8IsCR29w0AhIHfjHeLk92px6HhECtYSOEDveI4ks3Tcf0RGs5_pEVcniooqKGiKt9VArhoHjvxaInCBYK3UVoi3pl6vSLrcbKtWv9pnUy1D2u4wSCreQVTJUGy97eszZgvK1g3nNu6oHgws_5vGXoniwC5Qn9L25q3w" />
+                <img alt="Digital Education Tools" className="w-full h-auto rounded-lg" src={heroImage} />
               </div>
               <div className="absolute -top-4 -right-4 w-16 h-16 md:w-24 md:h-24 bg-secondary-container/20 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-6 -left-6 w-24 h-24 md:w-40 md:h-40 bg-primary-fixed/30 rounded-full blur-3xl"></div>
@@ -110,15 +113,15 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
               <div className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:soft-blue-shadow transition-all text-center">
                 <h3 className="font-headline-md text-primary mb-4">O Levels</h3>
-                <p className="font-body-md text-on-surface-variant">Full syllabus coverage with detailed revision notes,topical past papers & notes.</p>
+                <p className="font-body-md text-on-surface-variant">Master the fundamentals with meticulously organized topical past papers and premium revision notes tailored for core subjects.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:soft-blue-shadow transition-all text-center">
                 <h3 className="font-headline-md text-primary mb-4">A Levels</h3>
-                <p className="font-body-md text-on-surface-variant">Advanced past paper archives and topical practice modules for all majors.</p>
+                <p className="font-body-md text-on-surface-variant">Conquer advanced concepts with chapter-by-chapter solved past papers and deep-dive resources designed for top-tier exam prep. </p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:soft-blue-shadow transition-all text-center">
                 <h3 className="font-headline-md text-primary mb-4">IGCSE</h3>
-                <p className="font-body-md text-on-surface-variant">Curated study paths designed specifically for the IGCSE curriculum standards.</p>
+                <p className="font-body-md text-on-surface-variant">Accelerate your revision with high-yield, chapter-wise questions and comprehensive study aids built strictly to latest syllabus standards.</p>
               </div>
             </div>
           </div>
@@ -130,7 +133,7 @@ const LandingPage = () => {
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Comprehensive Academic Support</h2>
-              <p className="font-body-md text-on-surface-variant max-w-2xl mx-auto">Our resources are meticulously curated by subject experts to ensure they align perfectly with the latest O/A Level curricula.</p>
+              <p className="font-body-md text-on-surface-variant max-w-2xl mx-auto">Our resources are meticulously curated by subject experts to ensure they align perfectly with the latest O/A & IGCSE Level curriculum.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-gutter">
@@ -187,20 +190,20 @@ const LandingPage = () => {
                   <div className="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error shrink-0">
                     <span className="material-symbols-outlined">cancel</span>
                   </div>
-                  <h3 className="font-headline-md text-on-surface">Manual Preparation</h3>
+                  <h3 className="font-headline-md text-on-surface"> Unsorted Resources</h3>
                 </div>
                 <ul className="space-y-6 flex-grow">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-error mt-1 shrink-0">remove</span>
-                    <span className="font-body-md text-on-surface-variant">Hours spent hunting for relevant notes & past papers across multiple sites.</span>
+                    <span className="font-body-md text-on-surface-variant"> Hours wasted hunting for relevant past papers and notes scattered across multiple, sketchy sites. </span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-error mt-1 shrink-0">remove</span>
-                    <span className="font-body-md text-on-surface-variant">Disorganized folders of PDFs without proper categorization.</span>
+                    <span className="font-body-md text-on-surface-variant">Messy, chaotic folders of PDFs with no clear chapter or topical categorization. </span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-error mt-1 shrink-0">remove</span>
-                    <span className="font-body-md text-on-surface-variant">Outdated notes that don't reflect current exam patterns.</span>
+                    <span className="font-body-md text-on-surface-variant"> Outdated material that completely misses recent syllabus revisions and exam patterns. </span>
                   </li>
                 </ul>
               </div>
@@ -215,15 +218,15 @@ const LandingPage = () => {
                 <ul className="space-y-6 flex-grow">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
-                    <span className="font-body-md text-on-surface">One-click access to topical notes and past papers found nowhere else</span>
+                    <span className="font-body-md text-on-surface"> Instant, one-click access to meticulously organized, chapter-by-chapter past papers and notes. </span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
-                    <span className="font-body-md text-on-surface"> Can't find a resource? We source and arrange it on request, just for you.</span>
+                    <span className="font-body-md text-on-surface">  Can't find a specific resource? We source, compile, and arrange it on request, just for you.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-primary mt-1 shrink-0">check</span>
-                    <span className="font-body-md text-on-surface">Curated by experts with daily updates to curriculum changes.</span>
+                    <span className="font-body-md text-on-surface"> Expertly curated materials continuously updated to match the latest international board specifications. </span>
                   </li>
                 </ul>
               </div>
@@ -240,22 +243,22 @@ const LandingPage = () => {
                 <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
                   <span className="material-symbols-outlined text-4xl" style={{ color: 'rgb(29, 78, 137)' }}>video_library</span>
                 </div>
-                <h3 className="font-headline-md text-primary mb-4">Interactive Learning</h3>
-                <p className="font-body-md text-on-surface-variant">Access high-quality video lessons and topical notes that simplify complex concepts.</p>
+                <h3 className="font-headline-md text-primary mb-4">Topical Precision  </h3>
+                <p className="font-body-md text-on-surface-variant"> Skip the chapters you haven't learned yet. Master your syllabus with past paper questions meticulously organized by topic and chapter. </p>
               </div>
               <div className="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center hover:soft-blue-shadow transition-all">
                 <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
                   <span className="material-symbols-outlined text-4xl" style={{ color: 'rgb(29, 78, 137)' }}>assignment_turned_in</span>
                 </div>
                 <h3 className="font-headline-md text-primary mb-4">Exam Readiness</h3>
-                <p className="font-body-md text-on-surface-variant">Practice with real exam-spec mock papers and topical archives to build confidence.</p>
+                <p className="font-body-md text-on-surface-variant">Practice with authentic, curriculum-specific questions and expert-solved solutions designed to build rock-solid exam confidence.</p>
               </div>
               <div className="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center hover:soft-blue-shadow transition-all sm:col-span-2 md:col-span-1">
                 <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
                   <span className="material-symbols-outlined text-4xl" style={{ color: 'rgb(29, 78, 137)' }}>timer</span>
                 </div>
-                <h3 className="font-headline-md text-primary mb-4">Self-Paced Mastery</h3>
-                <p className="font-body-md text-on-surface-variant">Study anywhere, anytime with resources built for independent revision.</p>
+                <h3 className="font-headline-md text-primary mb-4"> Streamlined Revision</h3>
+                <p className="font-body-md text-on-surface-variant"> Download classroom-ready PDFs instantly. Study anywhere, anytime with premium resources built for efficient, independent revision. </p>
               </div>
             </div>
           </div>
@@ -302,7 +305,7 @@ const LandingPage = () => {
           <div className="absolute inset-0 wavy-bg opacity-30 z-10"></div>
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-20 text-center">
             <h2 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-primary mb-6 md:mb-8">Ready to Transform Your Learning Journey?</h2>
-            <p className="font-body-lg text-body-md md:text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-10 md:mb-12">Join over 60,000 students and tutors who are achieving academic excellence with Resourza. Start your journey today with no obligation.</p>
+            <p className="font-body-lg text-body-md md:text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-10 md:mb-12">Join over 1500+ students and tutors who are achieving academic excellence with Resourza. Start your journey today with no obligation.</p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
               <button onClick={() => scrollToSection('academic-support')}
                 className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-full bg-white text-primary font-headline-md hover:bg-primary-fixed transition-all shadow-xl">View Our Resources</button>
