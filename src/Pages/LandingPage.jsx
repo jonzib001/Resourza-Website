@@ -241,7 +241,7 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-gutter">
               <div className="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center hover:soft-blue-shadow transition-all">
                 <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
-                  <span className="material-symbols-outlined text-4xl" style={{ color: 'rgb(29, 78, 137)' }}>video_library</span>
+                  <span className="material-symbols-outlined text-4xl" style={{ color: 'rgb(29, 78, 137)' }}>menu_book</span>
                 </div>
                 <h3 className="font-headline-md text-primary mb-4">Topical Precision  </h3>
                 <p className="font-body-md text-on-surface-variant"> Skip the chapters you haven't learned yet. Master your syllabus with past paper questions meticulously organized by topic and chapter. </p>
