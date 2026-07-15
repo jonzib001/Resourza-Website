@@ -11,7 +11,7 @@ const TopicalPastPapers = () => {
   const { boardId } = useParams();
   const [searchTerm, setSearchTerm] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // Fetch data based on the URL parameter, default to a-levels if not found
   const boardData = topicalData[boardId] || topicalData['a-levels'];
 
@@ -21,8 +21,8 @@ const TopicalPastPapers = () => {
   }, [boardId]);
 
   // Dynamic filtering logic for the search bar
-  const filteredSubjects = boardData.subjects.filter(subject => 
-    subject.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+  const filteredSubjects = boardData.subjects.filter(subject =>
+    subject.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     subject.code.includes(searchTerm)
   );
 
@@ -36,38 +36,38 @@ const TopicalPastPapers = () => {
             <img src="/Final-Logo.png" alt="Resourza" className="h-8" />
             <Link to="/" className="text-headline-md font-headline-md font-bold text-primary">Resourza</Link>
           </div>
-          
+
           <div className="hidden md:flex items-center gap-gutter ml-auto mr-0">
             <a href="#contact" onClick={(e) => handleWhatsAppGeneralInquiry(e, `${boardData.title} Topicals`)} className="text-on-surface-variant font-body-md hover:text-primary transition-colors cursor-pointer">Contact Us</a>
             <Link to="/" className="text-primary font-bold font-body-md border-b-2 border-primary">Resources</Link>
-            
+
             {/* Nested Board Dropdown */}
             <BoardNavBar />
           </div>
-          
+
           {/* Functional Search Bar */}
           <div className="flex items-center gap-4 ml-8">
             <div className="hidden lg:flex items-center bg-white px-4 py-2 rounded-full border border-tertiary/20 soft-blue-shadow">
               <span className="material-symbols-outlined text-primary mr-2" style={{ fontSize: '20px' }}>search</span>
-              <input 
-                type="text" 
-                placeholder="Search resources..." 
+              <input
+                type="text"
+                placeholder="Search resources..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="bg-transparent border-none focus:ring-0 text-sm w-40 font-body-md outline-none"
               />
             </div>
           </div>
-           <button 
-            onClick={() => setIsMobileMenuOpen(true)} 
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
             className="md:hidden text-primary p-2 flex items-center justify-center rounded-full hover:bg-primary/5 transition-colors"
           >
             <span className="material-symbols-outlined text-3xl">menu</span>
           </button>
-          <MobileHeader 
-          isMobileMenuOpen={isMobileMenuOpen} 
-          setIsMobileMenuOpen={setIsMobileMenuOpen} 
-        />
+          <MobileHeader
+            isMobileMenuOpen={isMobileMenuOpen}
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
+          />
         </nav>
       </header>
 
@@ -87,7 +87,7 @@ const TopicalPastPapers = () => {
             <p className="text-on-surface-variant font-body-lg max-w-3xl leading-relaxed">
               {boardData.description}
             </p>
-            
+
             {/* Level filters - Dynamically show only if it is A Levels */}
             {boardId === 'a-levels' && (
               <div className="flex gap-4 mt-8">
@@ -103,9 +103,9 @@ const TopicalPastPapers = () => {
           {filteredSubjects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
               {filteredSubjects.map((subject) => (
-                <Link 
-                  to={`/topical/${boardId}/${subject.id}`} 
-                  key={subject.id} 
+                <Link
+                  to={`/topical/${boardId}/${subject.id}`}
+                  key={subject.id}
                   className="bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow flex flex-col justify-between cursor-pointer"
                 >
                   <div>
@@ -123,7 +123,7 @@ const TopicalPastPapers = () => {
                     </p>
                   </div>
                   <div className="flex items-center justify-between mt-4 pt-6 border-t border-surface-container">
-                    <span className="text-primary font-bold font-label-md">{subject.resources} Resources</span>
+                    {/* <span className="text-primary font-bold font-label-md">{subject.resources} Resources</span> */}
                     <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">
                       Explore <span className="material-symbols-outlined ml-1">chevron_right</span>
                     </span>

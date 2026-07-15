@@ -6,7 +6,7 @@ export const topicalData = {
     description: "Explore core subjects tailored for the Cambridge O Level curriculum. Access highly detailed topical breakdowns to target specific weaknesses.",
     subjects: [
       { 
-        id: "ol-math", name: "Mathematics", code: "4024", icon: "calculate", tag: "PAST PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.2k",
+        id: "ol-math", name: "Mathematics", code: "4024", icon: "calculate", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.2k",
         description: "Master everyday mathematics, geometry, and algebra with comprehensive topical questions.",
         components: [
           { id: "p1", name: "Paper 1 - Non-Calculator", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "calculate", description: "Foundational mathematics without the use of a calculator.", topics: [
@@ -83,12 +83,12 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-chem", name: "Chemistry", code: "5070", icon: "science", tag: "NOTES AVAILABLE", tagColor: "bg-primary-fixed text-primary", resources: "950",
+        id: "ol-chem", name: "Chemistry", code: "5070", icon: "science", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "950",
         description: "Comprehensive chemistry resources.",
         components: [] 
       },
       { 
-        id: "ol-bio", name: "Biology", code: "5090", icon: "biotech", tag: "STUDY NOTES", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
+        id: "ol-bio", name: "Biology", code: "5090", icon: "biotech", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
         description: "Detailed breakdowns of human and plant biology.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Foundational multiple choice covering biological processes.", topics: [
@@ -136,7 +136,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-phy", name: "Physics", code: "5054", icon: "bolt", tag: "PAST PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "840",
+        id: "ol-phy", name: "Physics", code: "5054", icon: "bolt", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "840",
         description: "From general physics to space exploration.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Foundational multiple choice covering general physics.", topics: [
@@ -158,7 +158,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-cs", name: "Computer Science", code: "2210", icon: "terminal", tag: "CODING", tagColor: "bg-error-container text-error", resources: "1.5k",
+        id: "ol-cs", name: "Computer Science", code: "2210", icon: "terminal", tag: "TOPICAL PAPERS", tagColor: "bg-error-container text-error", resources: "1.5k",
         description: "Algorithm design, logic, and hardware systems.",
         components: [
           { id: "p1", name: "Paper 1 - Computer Systems", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "memory", description: "Hardware, networks, and data transmission.", topics: [
@@ -178,7 +178,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-econ", name: "Economics", code: "2281", icon: "monitoring", tag: "REPORTS", tagColor: "bg-tertiary-fixed text-primary", resources: "620",
+        id: "ol-econ", name: "Economics", code: "2281", icon: "monitoring", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "620",
         description: "Macro and micro economic indicators and policies.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core economic problems and market functions.", topics: [
@@ -218,7 +218,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-acc", name: "Accounting", code: "7707", icon: "account_balance", tag: "CASE STUDIES", tagColor: "bg-tertiary-fixed text-primary", resources: "780",
+        id: "ol-acc", name: "Accounting", code: "7707", icon: "account_balance", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "780",
         description: "Foundational accounting principles and financial statements.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core bookkeeping and statement rules.", topics: [
@@ -268,7 +268,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-bus", name: "Business Studies", code: "7115", icon: "business_center", tag: "STUDY NOTES", tagColor: "bg-secondary-fixed text-primary", resources: "890",
+        id: "ol-bus", name: "Business Studies", code: "7115", icon: "business_center", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "890",
         description: "Marketing, operations, and external business influences.",
         components: [
           { id: "p1", name: "Paper 1 - Short Answer and Data Response", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Business fundamentals and activity analysis.", topics: [
@@ -291,7 +291,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ol-addmath", name: "Additional Mathematics", code: "4037", icon: "functions", tag: "PAST PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "500",
+        id: "ol-addmath", name: "Additional Mathematics", code: "4037", icon: "functions", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "500",
         description: "Advanced mathematical preparation for higher studies.",
         components: [] 
       }
@@ -302,7 +302,7 @@ export const topicalData = {
     description: "Explore core subjects tailored for the Cambridge IGCSE curriculum. Access highly detailed topical breakdowns to target specific weaknesses.",
     subjects: [
       { 
-        id: "ig-math", name: "Mathematics", code: "0580", icon: "calculate", tag: "PAST PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.4k",
+        id: "ig-math", name: "Mathematics", code: "0580", icon: "calculate", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.4k",
         description: "Numbers, geometry, statistics, and algebraic logic.",
         components: [
           { id: "p2", name: "Paper 2 - Non-calculator (Extended)", type: "Extended", tagColor: "bg-secondary-fixed text-primary", icon: "calculate", description: "Extended non-calculator syllabus applications.", topics: [
@@ -346,12 +346,12 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-addmath", name: "Additional Mathematics", code: "0606", icon: "functions", tag: "NOTES AVAILABLE", tagColor: "bg-primary-fixed text-primary", resources: "600",
+        id: "ig-addmath", name: "Additional Mathematics", code: "0606", icon: "functions", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "600",
         description: "Advanced supplementary mathematics preparation.",
         components: [] 
       },
       { 
-        id: "ig-ict", name: "ICT", code: "0417", icon: "computer", tag: "STUDY NOTES", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
+        id: "ig-ict", name: "ICT", code: "0417", icon: "computer", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
         description: "Information and communication technology theory.",
         components: [
           { id: "p1", name: "Paper 1 - Theory", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "memory", description: "Complete overview of ICT systems and applications.", topics: [
@@ -380,7 +380,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-cs", name: "Computer Science", code: "0478", icon: "terminal", tag: "CODING", tagColor: "bg-error-container text-error", resources: "1.3k",
+        id: "ig-cs", name: "Computer Science", code: "0478", icon: "terminal", tag: "TOPICAL PAPERS", tagColor: "bg-error-container text-error", resources: "1.3k",
         description: "Systems, logic, algorithms, and binary architectures.",
         components: [
           { id: "p1", name: "Paper 1 - Computer Systems", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "memory", description: "Hardware, networks, and data transmission.", topics: [
@@ -400,7 +400,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-bio", name: "Biology", code: "0610", icon: "biotech", tag: "PAST PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "900",
+        id: "ig-bio", name: "Biology", code: "0610", icon: "biotech", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "900",
         description: "Life processes, organisms, and biotechnology.",
         components: [
           { id: "p2", name: "Paper 2 - Multiple Choice (Extended)", type: "Extended", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Extended syllabus multiple choice concepts.", topics: [
@@ -475,7 +475,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-phy", name: "Physics", code: "0625", icon: "bolt", tag: "REPORTS", tagColor: "bg-tertiary-fixed text-primary", resources: "850",
+        id: "ig-phy", name: "Physics", code: "0625", icon: "bolt", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "850",
         description: "Kinematics, forces, and atomic energy.",
         components: [
           { id: "p2", name: "Paper 2 - Multiple Choice (Extended)", type: "Extended", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Extended syllabus multiple choice concepts.", topics: [
@@ -523,7 +523,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-chem", name: "Chemistry", code: "0620", icon: "science", tag: "STUDY NOTES", tagColor: "bg-secondary-fixed text-primary", resources: "920",
+        id: "ig-chem", name: "Chemistry", code: "0620", icon: "science", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "920",
         description: "Reactions, stoichiometry, and organic structures.",
         components: [
           { id: "p2", name: "Paper 2 - Multiple Choice (Extended)", type: "Extended", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Extended syllabus multiple choice concepts.", topics: [
@@ -592,7 +592,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-econ", name: "Economics", code: "0455", icon: "monitoring", tag: "CASE STUDIES", tagColor: "bg-tertiary-fixed text-primary", resources: "700",
+        id: "ig-econ", name: "Economics", code: "0455", icon: "monitoring", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "700",
         description: "Macro and micro economic indicators and policies.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core economic problems and market functions.", topics: [
@@ -632,7 +632,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-bus", name: "Business Studies", code: "0450", icon: "business_center", tag: "PAST PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "810",
+        id: "ig-bus", name: "Business Studies", code: "0450", icon: "business_center", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "810",
         description: "Marketing, operations, and external business influences.",
         components: [
           { id: "p1", name: "Paper 1 - Short Answer and Data Response", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Business fundamentals and activity analysis.", topics: [
@@ -655,7 +655,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "ig-acc", name: "Accounting", code: "0452", icon: "account_balance", tag: "STUDY NOTES", tagColor: "bg-primary-fixed text-primary", resources: "650",
+        id: "ig-acc", name: "Accounting", code: "0452", icon: "account_balance", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "650",
         description: "Foundational accounting principles and financial statements.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "Core", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core bookkeeping and statement rules.", topics: [
@@ -705,17 +705,17 @@ export const topicalData = {
         ]
       },
       // { 
-      //   id: "ig-coord", name: "Co-ordinated Sciences", code: "0654", icon: "science", tag: "PAST PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "500",
+      //   id: "ig-coord", name: "Co-ordinated Sciences", code: "0654", icon: "science", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "500",
       //   description: "Combined evaluation of core scientific principles.",
       //   components: [] 
       // },
       // { 
-      //   id: "ig-comb", name: "Combined Science", code: "0653", icon: "science", tag: "NOTES AVAILABLE", tagColor: "bg-secondary-fixed text-primary", resources: "450",
+      //   id: "ig-comb", name: "Combined Science", code: "0653", icon: "science", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "450",
       //   description: "Foundational combined scientific modules.",
       //   components: [] 
       // },
       { 
-        id: "ig-intmath", name: "International Mathematics", code: "0607", icon: "calculate", tag: "PAST PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "400",
+        id: "ig-intmath", name: "International Mathematics", code: "0607", icon: "calculate", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "400",
         description: "Specialized international mathematical frameworks.",
         components: [
           { id: "p2", name: "Paper 2 - Non-calculator (Extended)", type: "Extended", tagColor: "bg-secondary-fixed text-primary", icon: "calculate", description: "Extended non-calculator syllabus applications.", topics: [
@@ -753,7 +753,7 @@ export const topicalData = {
     description: "Explore 15+ core subjects tailored for the Cambridge Assessment curriculum. Access curated high-quality notes, past papers, and expert guides in a distraction-free environment.",
     subjects: [
       { 
-        id: "al-acc", name: "Accounting", code: "9706", icon: "account_balance", tag: "PAST PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "1.8k",
+        id: "al-acc", name: "Accounting", code: "9706", icon: "account_balance", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "1.8k",
         description: "Master financial statements, cost concepts, and management accounting with detailed topical breakdowns.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core accounting concepts and conventions.", topics: [
@@ -828,7 +828,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-bus", name: "Business", code: "9609", icon: "business_center", tag: "CASE STUDIES", tagColor: "bg-tertiary-fixed text-primary", resources: "780",
+        id: "al-bus", name: "Business", code: "9609", icon: "business_center", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "780",
         description: "Analyze business environments, marketing, and human resource management using real-world case studies.",
         components: [
           { id: "p1", name: "Paper 1 - Business Concepts 01", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core concepts including environment, people, and marketing.", topics: [
@@ -850,7 +850,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-econ", name: "Economics", code: "9708", icon: "monitoring", tag: "REPORTS", tagColor: "bg-tertiary-fixed text-primary", resources: "620",
+        id: "al-econ", name: "Economics", code: "9708", icon: "monitoring", tag: "TOPICAL PAPERS", tagColor: "bg-tertiary-fixed text-primary", resources: "620",
         description: "Study micro and macro economic theories, market structures, and government interventions.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Foundational micro and macro economic concepts.", topics: [
@@ -897,7 +897,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-math", name: "Mathematics", code: "9709", icon: "calculate", tag: "PAST PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.2k",
+        id: "al-math", name: "Mathematics", code: "9709", icon: "calculate", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.2k",
         description: "Master each syllabus component with precision. Access curated, topic-wise questions spanning over a decade of past papers.",
         components: [
           { id: "p1", name: "Pure Mathematics 1", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "functions", description: "Quadratics, functions, coordinate geometry, circular measure, trigonometry, series, differentiation, and integration.", topics: [
@@ -951,7 +951,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-furmath", name: "Further Mathematics", code: "9231", icon: "functions", tag: "REPORTS", tagColor: "bg-primary-fixed text-primary", resources: "400",
+        id: "al-furmath", name: "Further Mathematics", code: "9231", icon: "functions", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "400",
         description: "Specialized advanced mathematical concepts designed to bridge the gap to university-level engineering and mathematics.",
         components: [
           { id: "p1", name: "Paper 1/2 - Further Pure Mathematics 1", type: "AS / A2 Level", tagColor: "bg-primary-fixed text-primary", icon: "functions", description: "Roots of polynomial equations, rational functions, matrices, and polar coordinates.", topics: [
@@ -990,7 +990,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-bio", name: "Biology", code: "9700", icon: "biotech", tag: "STUDY NOTES", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
+        id: "al-bio", name: "Biology", code: "9700", icon: "biotech", tag: "TOPICAL PAPERS", tagColor: "bg-secondary-fixed text-primary", resources: "1.1k",
         description: "Comprehensive topical breakdown from cell structure and enzymes to genetic technology and evolution.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Core biological mechanisms and cellular structures.", topics: [
@@ -1032,7 +1032,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-chem", name: "Chemistry", code: "9701", icon: "science", tag: "PAST PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "950",
+        id: "al-chem", name: "Chemistry", code: "9701", icon: "science", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "950",
         description: "A complete repository covering physical, inorganic, and organic chemistry.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Foundational multiple choice covering all three branches of chemistry.", topics: [
@@ -1113,7 +1113,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-phy", name: "Physics", code: "9702", icon: "bolt", tag: "NOTES AVAILABLE", tagColor: "bg-primary-fixed text-primary", resources: "840",
+        id: "al-phy", name: "Physics", code: "9702", icon: "bolt", tag: "TOPICAL PAPERS", tagColor: "bg-primary-fixed text-primary", resources: "840",
         description: "From kinematics and dynamics to quantum and medical physics, perfectly structured for revision.",
         components: [
           { id: "p1", name: "Paper 1 - Multiple Choice", type: "AS Level", tagColor: "bg-secondary-fixed text-primary", icon: "assignment", description: "Foundational kinematics, waves, and electricity multiple choice.", topics: [
@@ -1163,7 +1163,7 @@ export const topicalData = {
         ]
       },
       { 
-        id: "al-cs", name: "Computer Science", code: "9618", icon: "terminal", tag: "CODING", tagColor: "bg-error-container text-error", resources: "1.5k",
+        id: "al-cs", name: "Computer Science", code: "9618", icon: "terminal", tag: "TOPICAL PAPERS", tagColor: "bg-error-container text-error", resources: "1.5k",
         description: "From algorithm design to artificial intelligence, thoroughly mapped for the CAIE syllabus.",
         components: [
           { id: "p1", name: "Paper 1 - Theory Fundamentals", type: "AS Level", tagColor: "bg-surface-variant text-on-surface-variant", icon: "memory", description: "Fundamentals module is currently being updated.", topics: []},

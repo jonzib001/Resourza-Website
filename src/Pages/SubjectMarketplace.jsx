@@ -113,7 +113,7 @@ const SubjectMarketplace = () => {
                     </p>
                   </div>
                   <div className="flex items-center justify-between mt-4 pt-6 border-t border-surface-container">
-                    <span className="text-primary font-bold font-label-md">{subject.resources} Resources</span>
+                    {/* <span className="text-primary font-bold font-label-md">{subject.resources} Resources</span> */}
                     <button className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">
                       Explore <span className="material-symbols-outlined ml-1">chevron_right</span>
                     </button>
