@@ -4,7 +4,7 @@ import { handleWhatsAppGeneralInquiry } from '../Services/WhatsAppService';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
 import ResourceCardLanding from '../SharedComponents/ResourceCardLanding';
-import { TOPICAL_BOARDS, YEARLY_BOARDS } from '../data/Hoverdata';
+import { TOPICAL_BOARDS, YEARLY_BOARDS,SUBJECT_NOTES_BOARDS } from '../data/Hoverdata';
 import BoardNavBar from '../SharedComponents/BoardNavBar';
 
 import heroImage from '../assets/Hero.jpeg';
@@ -148,7 +148,7 @@ const LandingPage = () => {
                 <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Request Now <span className="material-symbols-outlined ml-1">chevron_right</span></span>
               </Link>
 
-              {/* Subject Notes Card -> Placeholder link until page is built */}
+              {/* Subject Notes Card -> Placeholder link until page is built
               <Link to="#notes" className="block bg-white p-8 rounded-xl border border-tertiary-fixed hover:border-primary transition-all group hover:soft-blue-shadow relative cursor-pointer">
                 <div className="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6 text-primary">
                   <span className="material-symbols-outlined text-3xl">menu_book</span>
@@ -156,7 +156,15 @@ const LandingPage = () => {
                 <h3 className="font-headline-md text-headline-md text-primary mb-3">Subject Notes</h3>
                 <p className="font-body-md text-on-surface-variant mb-6">Concise, well-structured summaries of complex topics for fast revision.</p>
                 <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Read Notes <span className="material-symbols-outlined ml-1">chevron_right</span></span>
-              </Link>
+              </Link> */}
+
+               <ResourceCardLanding
+                icon="menu_book"
+                title="Subject Notes"
+                description="Concise, well-structured summaries of complex topics for fast revision."
+                cta="View Notes"
+                boards={SUBJECT_NOTES_BOARDS}
+              />
 
               {/* Topical Past Papers Card — interactive board picker */}
               <ResourceCardLanding

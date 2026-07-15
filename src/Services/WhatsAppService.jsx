@@ -31,18 +31,23 @@ export const handleWhatsappTopics = (e, boardTitle, subjectName, subjectCode, co
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
 };
 
-//For the general inquiry from Landing Page
+//For general inquiry — accepts an optional context string for dynamic messages
+//  - No context → generic message (landing page, footer, mobile header, etc.)
+//  - With context → message includes which page / board / subject the user is viewing
 
-export const handleWhatsAppGeneralInquiry = (e) => {
+export const handleWhatsAppGeneralInquiry = (e, context) => {
   e.preventDefault();
 
   const phoneNumber = "923292248788";
-  const message = "Hi Resourza! I have a general inquiry about your premium academic resources. Could you please assist me?";
+
+  const message = context
+    ? `Hi Resourza! I'm reaching out from the ${context} page. I'd like to learn more about the resources available. Could you please assist me?`
+    : "Hi Resourza! I have a general inquiry about your premium academic resources. Could you please assist me?";
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
 
-}
 
 // For the mock papers
 export const handleWhatsAppMockPapers = (e) => {

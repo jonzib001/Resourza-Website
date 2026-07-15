@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { boardsData } from '../data/boardsData';
+import { handleWhatsAppGeneralInquiry } from '../Services/WhatsAppService';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
 import BoardNavBar from '../SharedComponents/BoardNavBar';
@@ -38,7 +39,7 @@ const SubjectMarketplace = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-gutter ml-auto mr-0">
-            <Link to="/contact" className="text-on-surface-variant font-body-md hover:text-primary transition-colors">Contact Us</Link>
+            <a href="#contact" onClick={(e) => handleWhatsAppGeneralInquiry(e, `${boardData.title} Yearly Past Papers`)} className="text-on-surface-variant font-body-md hover:text-primary transition-colors cursor-pointer">Contact Us</a>
             <Link to="/" className="text-primary font-bold font-body-md border-b-2 border-primary">Resources</Link>
             
             {/* Nested Board Dropdown */}
@@ -137,7 +138,7 @@ const SubjectMarketplace = () => {
           <p className="text-on-surface-variant font-body-lg max-w-2xl mb-8">
             Connect with our team on WhatsApp to get instant access or discuss bulk educator resources.
           </p>
-          <a href="#whatsapp" className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-label-md hover:opacity-90 transition-all shadow-md">
+          <a href="#whatsapp" onClick={(e) => handleWhatsAppGeneralInquiry(e, `${boardData.title} Yearly Past Papers`)} className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-label-md hover:opacity-90 transition-all shadow-md cursor-pointer">
             <span className="material-symbols-outlined">chat</span>
             Chat with Us on WhatsApp
           </a>

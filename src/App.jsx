@@ -7,6 +7,8 @@ import Components from './Pages/Components';
 import Topics from './Pages/Topics';
 import MockPapers from './Pages/MockPapers';
 import BoardSelection from './Pages/BoardSelection';
+import TopicalNotes from './Pages/TopicalNotes';
+import NotesLevelSelection from './Pages/NotesLevelSelection';
 import ScrollToTop from './SharedComponents/ScrollToTop';
 
 function App() {
@@ -15,13 +17,15 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        
+
         <Route path="/board/:boardId" element={<SubjectMarketplace />} />
         <Route path="/topical/:boardId" element={<TopicalPastPapers />} />
         <Route path="/topical/:boardId/:subjectId" element={<Components />} />
-        
+
         <Route path="/topical/:boardId/:subjectId/:componentId" element={<Topics />} />
 
+        <Route path="/notes/:boardId" element={<TopicalNotes />} />
+        <Route path="/notes/:boardId/:subjectId" element={<NotesLevelSelection />} />
         <Route path="/mock-papers" element={<MockPapers />} />
         <Route path="/boards/:examBoardId" element={<BoardSelection />} />
       </Routes>

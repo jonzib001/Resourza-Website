@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { topicalData } from '../data/topicalData';
+import { handleWhatsAppGeneralInquiry } from '../Services/WhatsAppService';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
 import BoardNavBar from '../SharedComponents/BoardNavBar';
@@ -37,7 +38,7 @@ const TopicalPastPapers = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-gutter ml-auto mr-0">
-            <Link to="/contact" className="text-on-surface-variant font-body-md hover:text-primary transition-colors">Contact Us</Link>
+            <a href="#contact" onClick={(e) => handleWhatsAppGeneralInquiry(e, `${boardData.title} Topicals`)} className="text-on-surface-variant font-body-md hover:text-primary transition-colors cursor-pointer">Contact Us</a>
             <Link to="/" className="text-primary font-bold font-body-md border-b-2 border-primary">Resources</Link>
             
             {/* Nested Board Dropdown */}
