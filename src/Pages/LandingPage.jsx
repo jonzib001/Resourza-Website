@@ -4,7 +4,7 @@ import { handleWhatsAppGeneralInquiry } from '../Services/WhatsAppService';
 import Footer from '../SharedComponents/Footer';
 import MobileHeader from '../SharedComponents/MobileHeader';
 import ResourceCardLanding from '../SharedComponents/ResourceCardLanding';
-import { TOPICAL_BOARDS, YEARLY_BOARDS,SUBJECT_NOTES_BOARDS } from '../data/Hoverdata';
+import { TOPICAL_BOARDS, YEARLY_BOARDS, SUBJECT_NOTES_BOARDS } from '../data/Hoverdata';
 import BoardNavBar from '../SharedComponents/BoardNavBar';
 
 import heroImage from '../assets/Hero.jpeg';
@@ -90,7 +90,7 @@ const LandingPage = () => {
           <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-gutter">
             <div className="text-center">
               <div className="text-primary-fixed text-headline-lg-mobile md:text-display-lg font-display-lg">1.5K+</div>
-              <div className="text-on-primary/70 font-label-md uppercase tracking-widest text-sm md:text-base">Active Students</div>
+              <div className="text-on-primary/70 font-label-md uppercase tracking-widest text-sm md:text-base">Active Educators</div>
             </div>
             <div className="text-center">
               <div className="text-primary-fixed text-headline-lg-mobile md:text-display-lg font-display-lg">15+</div>
@@ -158,7 +158,7 @@ const LandingPage = () => {
                 <span className="inline-flex items-center text-primary font-label-md group-hover:gap-2 transition-all">Read Notes <span className="material-symbols-outlined ml-1">chevron_right</span></span>
               </Link> */}
 
-               <ResourceCardLanding
+              <ResourceCardLanding
                 icon="menu_book"
                 title="Subject Notes"
                 description="Concise, well-structured summaries of complex topics for fast revision."
