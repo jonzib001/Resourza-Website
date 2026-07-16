@@ -85,7 +85,7 @@ const SubBoardCard = ({ subBoard }) => {
     {
       label: 'Notes',
       icon: 'menu_book',
-      to: `#notes`,
+      to: `/notes/${subBoard.id}`,
     },
     {
       label: 'Yearly Past Papers',
